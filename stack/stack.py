@@ -27,8 +27,9 @@ class Stack:
         return add
 
     def pop(self):
-        popped = self.size.pop()
+        popped = self.size
         if popped == []:
             popped = 0
         else:
-            return popped
+            remove = popped.pop()
+            return remove
