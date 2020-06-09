@@ -6,6 +6,12 @@ class ListNode:
         self.prev = prev
         self.next = next
 
+    def getValue(self):
+        return self.value
+
+    def getNext(self):
+        return self.next
+
     """Wrap the given value in a ListNode and insert it
     after this node. Note that this node could already
     have a next node it is point to."""
@@ -112,4 +118,14 @@ class DoublyLinkedList:
         if self.head is None:
             return None
         
-        
+        maxNode = self.head.getValue()
+
+        currentNode = self.head.getNext()
+
+        while currentNode is not None:
+            if currentNode.getValue() > maxNode:
+                maxNode = currentNode.getValue()
+            
+            currentNode = currentNode.getNext()
+
+        return maxNode
