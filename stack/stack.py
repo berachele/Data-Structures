@@ -166,6 +166,8 @@ return elements in Last In First Out order.
 3. What is the difference between using an array vs. a linked list when 
    implementing a Stack?
 """
+
+# Step 1
 # class Stack:
 #     def __init__(self):
 #         self.size = []
@@ -186,6 +188,7 @@ return elements in Last In First Out order.
 #             remove = popped.pop()
 #             return remove
 
+# Step 2
 class Stack:
     def __init__(self):
         self.size = 0
