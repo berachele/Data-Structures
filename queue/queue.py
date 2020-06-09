@@ -1,3 +1,5 @@
+from collections import deque
+
 """
 A queue is a data structure whose primary purpose is to store and
 return elements in First In First Out order. 
@@ -30,8 +32,9 @@ class Queue:
         return add
 
     def dequeue(self):
-        drop = self.size.pop()
-        if drop is None:
-            drop = 0
+        drop = deque(self.size)
+        remove = drop.popleft()
+        if remove is None:
+            self.size = 0
         else:
-            return drop
+            return self.size
