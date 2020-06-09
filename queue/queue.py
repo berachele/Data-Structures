@@ -1,4 +1,3 @@
-from collections import deque
 
 """
 A queue is a data structure whose primary purpose is to store and
@@ -18,25 +17,18 @@ Stretch: What if you could only use instances of your Stack class to implement t
 
 class Queue:
     def __init__(self):
-        self.size = []
-        if self.size is None:
-            self.size = 0
-        else:
-            self.size = self.size
+        self.storage = []
 
     def __len__(self):
-        length = len(self.size)
+        length = len(self.storage)
         return length
 
     def enqueue(self, value):
-        add = self.size.append(value)
+        add = self.storage.append(value)
         return add
 
     def dequeue(self):
-        drop = self.size
-        if drop is None:
-            drop = 0
+        if self.__len__() == 0:
+            return None
         else:
-            removed = deque(drop)
-            delete = removed.popleft()
-            return delete
+            return self.storage.pop(0)

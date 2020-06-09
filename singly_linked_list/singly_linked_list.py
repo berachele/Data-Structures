@@ -2,11 +2,11 @@ class Node:
     def __init__(self, value, next=None):
         self.value = value
         self.next_node = next
-
+​
     def get_value(self):
         # returns the node's data 
         return self.value
-        
+​
     def get_next(self):
         # returns the thing pointed at by this node's `next` reference 
         return self.next_node
@@ -46,7 +46,6 @@ class LinkedList:
     '''
     Removes the Node that `self.tail` is referring to and returns the 
     Node's data
-​
     What's the runtime of this method?
     '''
     def remove_tail(self):
@@ -105,7 +104,6 @@ class LinkedList:
     '''
     Traverses the linked list and returns a boolean indicating whether the 
     specified `data` is in the linked list.
-​
     What's the runtime for this method?
     '''
     def contains(self, data):
@@ -132,7 +130,6 @@ class LinkedList:
 ​
     '''
     Traverses the linked list, fetching the max value in the linked list
-​
     What is the runtime of this method?
     '''
     def get_max(self):
@@ -150,3 +147,15 @@ class LinkedList:
             current = current.get_next()
 ​
         return max_so_far
+​
+    def get_length(self):
+        counter = 1
+        if self.head == None:
+            return 0
+        if self.head == self.tail:
+            return counter
+        current = self.head
+        while current.get_next() != self.tail:
+                current = current.get_next()
+                counter +=1
+        return counter
