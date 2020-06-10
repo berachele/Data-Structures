@@ -17,7 +17,22 @@ class BSTNode:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        #compare the value to the root's value to determine which direction to go
+        #if value < root's value, go left
+        if value < self.value:
+            #does it already have a left child though? We don't want to overwrite a value
+            if self.left:
+                #self.left is a Node
+                self.left.insert(value)
+            else:
+                self.left = BSTNode(value)
+        #otherwise value >=  root's value, go right
+        else:
+            if self.right:
+                #self.right is a  Node
+                self.right.insert(value)
+            else:
+                self.right = BSTNode(value)
 
     # Return True if the tree contains the value
     # False if it does not
@@ -32,7 +47,7 @@ class BSTNode:
     def for_each(self, fn):
         pass
 
-    # Part 2 -----------------------
+    # Part / Day 2 -----------------------
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
