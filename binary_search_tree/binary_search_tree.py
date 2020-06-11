@@ -144,20 +144,36 @@ class BSTNode:
             if myNode.left:
                 stack.append(myNode.left)
 
-
     # Stretch Goals -------------------------
     # Note: Research may be required
 
     # Print Pre-order recursive DFT
     def pre_order_dft(self, node):
-        pass
     #checking parent before child
+        #print that value
+        print(self.value)
+        if self.left:
+            self.left.pre_order_dft(self)    
+        #checking if theres a right
+        #at top then going right, if left?/lower?
+        if self.right:
+            self.right.pre_order_dft(self)
+        
 
     # Print Post-order recursive DFT
     def post_order_dft(self, node):
-        pass
     #child before parent
+        #at top then going right, if left?/lower?
+        if self.left:
+            self.left.post_order_dft(self)    
+        #checking if theres a right
+        if self.right:
+            self.right.post_order_dft(self)
+        #print that value
+        print(self.value)
 
+
+#TESTER
 bst = BSTNode(15)
 bst.insert(13)
 bst.insert(17)
@@ -166,6 +182,6 @@ bst.insert(14)
 bst.insert(12)
 bst.insert(16)
 # # bst.for_each(print)
-bst.in_order_print(bst)
+# bst.in_order_print(bst)
 # bst.dft_print(bst)
 # # bst.bft_print(bst)
