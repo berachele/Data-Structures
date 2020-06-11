@@ -170,18 +170,18 @@ return elements in Last In First Out order.
 # Step 1
 # class Stack:
 #     def __init__(self):
-#         self.size = []
+#         self.storage = []
 
 #     def __len__(self):
-#         length = len(self.size)
+#         length = len(self.storage)
 #         return length
 
 #     def push(self, value):
-#         add = self.size.append(value)
+#         add = self.storage.append(value)
 #         return add
 
 #     def pop(self):
-#         popped = self.size
+#         popped = self.storage
 #         if popped == []:
 #             popped = 0
 #         else:

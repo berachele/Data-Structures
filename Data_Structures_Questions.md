@@ -17,7 +17,7 @@ O(1)
 ## Queue
 
 1. What is the runtime complexity of `enqueue` using a list?
-O(1)
+O(n)
 2. What is the runtime complexity of `enqueue` using a linked list?
 O(1)
 3. What is the runtime complexity of `dequeue` using a list?
@@ -45,9 +45,9 @@ O(1)
 7. What is the runtime complexity of `DoublyLinkedList.remove_from_tail`?
 O(1)
 8. What is the runtime complexity of `DoublyLinkedList.move_to_front`?
-O(n)
+O(1)
 9. What is the runtime complexity of `DoublyLinkedList.move_to_end`?
-O(n)
+O(1)
 10. What is the runtime complexity of `DoublyLinkedList.delete`?
 O(1)
     a. Compare the runtime of the doubly linked list's `delete` method with the worst-case runtime of the JS `Array.splice` method. Which method generally performs better?
